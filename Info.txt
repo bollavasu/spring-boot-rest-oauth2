@@ -1,0 +1,25 @@
+
+https://github.com/hendisantika/spring-boot-security-oauth2-example
+
+1)Access with out token 
+  http://localhost:8080/users/user             (GET)
+
+2)Generate the token 
+  http://localhost:8080/oauth/token            (POST)
+
+Authorization -> Basic Auth
+username : hendi-client
+password : hendi-secret
+
+Headers 
+accept           application/json
+content-type     application/json
+
+Body -> x-www-form-urlencoded
+username   : hendi
+password   : password
+grant_type : password
+
+3)Access with the generated token 
+
+  http://localhost:8080/users/user?access_token=2c481c95-816a-4e14-ad8e-54a409191aa5                     (GET)
